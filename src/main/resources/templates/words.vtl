@@ -4,7 +4,7 @@
 #end
 
 <ul>
-  #foreach ($sortedWord in $SortedWords)
+  #foreach ($sortedWord in $sortedWords)
     <li><a href="/words/$sortedWord.getId()">$sortedWord.getWord()</a></li>
   #end
 </ul>

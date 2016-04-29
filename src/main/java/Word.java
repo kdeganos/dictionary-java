@@ -12,6 +12,7 @@ public class Word{
    mId = instances.size();
    instances.add(this);
    mDefinitions = new ArrayList<Definition>();
+   sortWords();
   }
 
   public String getWord() {
@@ -46,16 +47,19 @@ public class Word{
     return mDefinitions;
   }
 
-  public static ArrayList<Word> sortWords() {
-    ArrayList<Word> list = instances;
-    Collections.sort(list, new Comparator<Word>() {
+  public static List<WordClone> sortWords() {
+    List<WordClone> clonedList = new ArrayList<WordClone>(instances.size());
+    for (Word instance : instances) {
+      clonedList.add(new WordClone(instance.getWord(), instance.getId()));
+    }
+    Collections.sort(clonedList, new Comparator<WordClone>() {
       @Override
-      public int compare(Word s1, Word s2) {
+      public int compare(WordClone s1, WordClone s2) {
         String word1 = s1.getWord();
         String word2 = s2.getWord();
         return word1.compareToIgnoreCase(word2);
       }
     });
-    return list;
+    return clonedList;
   }
 }

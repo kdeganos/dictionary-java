@@ -25,7 +25,7 @@ public class AppTest extends FluentTest{
   @After
   public void tearDown() {
     Word.clear();
-    Definition.clear();
+    // Definition.clear();
   }
 
   @Test

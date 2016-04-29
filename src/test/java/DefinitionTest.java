@@ -4,9 +4,9 @@ import static org.junit.Assert.*;
 
 public class DefinitionTest {
   @After
-  public void tearDown() {
-    Definition.clear();
-  }
+  // public void tearDown() {
+  //   Definition.clear();
+  // }
 
   @Test
   public void word_instantiatesCorrectly_true() {
@@ -20,18 +20,18 @@ public class DefinitionTest {
     assertEquals("test", testDefinition.getDefinition());
   }
 
-  @Test
-  public void all_returnsAllInstancesofDefinition_true() {
-    Definition testDefinitionOne = new Definition("test");
-    Definition testDefinitionTwo = new Definition("two");
-    assertEquals(true, Definition.all().contains(testDefinitionOne));
-    assertEquals(true, Definition.all().contains(testDefinitionTwo));
-  }
-
-  @Test
-  public void clear_emptiesAllDefinitionsFromList_0() {
-    Definition testDefinition = new Definition("test");
-    Definition.clear();
-    assertEquals(Definition.all().size(), 0);
-  }
+  // @Test
+  // public void all_returnsAllInstancesofDefinition_true() {
+  //   Definition testDefinitionOne = new Definition("test");
+  //   Definition testDefinitionTwo = new Definition("two");
+  //   assertEquals(true, Definition.all().contains(testDefinitionOne));
+  //   assertEquals(true, Definition.all().contains(testDefinitionTwo));
+  // }
+  //
+  // @Test
+  // public void clear_emptiesAllDefinitionsFromList_0() {
+  //   Definition testDefinition = new Definition("test");
+  //   Definition.clear();
+  //   assertEquals(Definition.all().size(), 0);
+  // }
 }
