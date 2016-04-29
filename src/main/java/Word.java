@@ -10,6 +10,7 @@ public class Word{
    mWord = word;
    mId = instances.size();
    instances.add(this);
+   mDefinitions = new ArrayList<Definition>();
   }
 
   public String getWord() {
