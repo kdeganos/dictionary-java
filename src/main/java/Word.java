@@ -3,9 +3,11 @@ import java.util.ArrayList;
 public class Word{
   private String mWord;
   private static ArrayList<Word> instances = new ArrayList<Word>();
+  private int mId;
 
   public Word (String word) {
    mWord = word;
+   mId = instances.size();
    instances.add(this);
   }
 
@@ -19,5 +21,9 @@ public class Word{
 
   public static void clear() {
     instances.clear();
+  }
+
+  public int getId() {
+    return mId;
   }
 }
