@@ -15,17 +15,17 @@ public class AppTest extends FluentTest{
 
   @Override
   public WebDriver getDefaultDriver() {
-   return webDriver;
- }
+    return webDriver;
+  }
 
- @ClassRule
- public static ServerRule server = new ServerRule();
- //
- // @Test
- // public void rootTest() {
- //   goTo("http://localhost:4567/");
- //   fill("#???").with("?");
- //   submit(".btn");
- //   assertThat(pageSource()).contains("what you want to be found related to your method");
- // }
+  @ClassRule
+  public static ServerRule server = new ServerRule();
+  //
+  // @Test
+  // public void rootTest() {
+  //   goTo("http://localhost:4567/");
+  //   fill("#???").with("?");
+  //   submit(".btn");
+  //   assertThat(pageSource()).contains("what you want to be found related to your method");
+  // }
 }
