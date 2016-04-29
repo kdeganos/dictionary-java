@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 
 public class Word{
+  private String mWord;
+  private static ArrayList<Word> instances = new ArrayList<Word>();
 
-  public Boolean runBlank (Integer year) {
-     // eventually put your code here
-     return false;
+  public Word (String word) {
+   mWord = word;
+   instances.add(this);
   }
 }

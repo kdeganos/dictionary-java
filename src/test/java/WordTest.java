@@ -5,8 +5,8 @@ import static org.junit.Assert.*;
 public class WordTest {
 
  @Test
- public void runBlank_CheckifPageIsBlank_true() {
-   Blank myBlank = new Blank();
-   assertEquals(FirstArgument, SecondArgument());
+ public void word_instantiatesCorrectly_true() {
+  Word testWord = new Word("test");
+  assertEquals(true, testWord instanceof Word);
  }
 }
