@@ -47,4 +47,9 @@ public class WordTest {
    Word testWordTwo = new Word("two");
    assertEquals(Word.find(testWordTwo.getId()), testWordTwo);
  }
+
+ @Test
+ public void find_returnsNullWhenNoWordFound_null() {
+   assertTrue(Word.find(999) == null);
+ }
 }
