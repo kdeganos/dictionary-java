@@ -26,4 +26,12 @@ public class Word{
   public int getId() {
     return mId;
   }
+
+  public static Word find(int id) {
+    try {
+      return instances.get(id);
+    } catch (IndexOutOfBoundsException e) {
+      return null;
+    }
+  }
 }

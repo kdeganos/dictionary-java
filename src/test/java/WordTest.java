@@ -40,4 +40,11 @@ public class WordTest {
    Word testWord = new Word("test");
    assertEquals(0, testWord.getId());
  }
+
+ @Test
+ public void find_returnsWordWithSameId_testWordTwo() {
+   Word testWordOne = new Word("test");
+   Word testWordTwo = new Word("two");
+   assertEquals(Word.find(testWordTwo.getId()), testWordTwo);
+ }
 }
