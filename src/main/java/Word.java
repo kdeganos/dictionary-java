@@ -8,4 +8,8 @@ public class Word{
    mWord = word;
    instances.add(this);
   }
+
+  public String getWord() {
+    return mWord;
+  }
 }
