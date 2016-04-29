@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertText;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -34,11 +35,23 @@ public class AppTest extends FluentTest{
   }
 
   @Test
-  public void WordIsCreatedTest() {
+  public void wordIsCreatedandDisplayed() {
     goTo("http://localhost:4567");
     click("a", withText("Add a New Word"));
     fill("#word").with("test");
     submit(".btn");
     assertThat(pageSource()).contains("test");
   }
+
+  @Test
+  public void wordShowPageDisplaysWord() {
+    goTo("http://localhost:4567/words/new");
+    fill("#word").with("test");
+    submit(".btn");
+    click("a", withText("test"));
+    assertThat(pageSource()).contains("test");
+  }
+
+
+
 }
