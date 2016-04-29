@@ -15,4 +15,12 @@ public class WordTest {
    Word testWord = new Word("test");
    assertEquals("test", testWord.getWord());
  }
+
+ @Test
+ public void all_returnsAllInstancesofWord_true() {
+   Word testWordOne = new Word("test");
+   Word testWordTwo = new Word("two");
+   assertEquals(true, Word.all().contains(testWordOne));
+   assertEquals(true, Word.all().contains(testWordTwo));
+ }
 }

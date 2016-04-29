@@ -12,4 +12,8 @@ public class Word{
   public String getWord() {
     return mWord;
   }
+
+  public static ArrayList<Word> all() {
+    return instances;
+  }
 }
