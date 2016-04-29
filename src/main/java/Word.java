@@ -4,6 +4,7 @@ public class Word{
   private String mWord;
   private static ArrayList<Word> instances = new ArrayList<Word>();
   private int mId;
+  private ArrayList<Definition> mDefinitions;
 
   public Word (String word) {
    mWord = word;
@@ -33,5 +34,13 @@ public class Word{
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
+  }
+
+  public void addDefinition(Definition definition) {
+    mDefinitions.add(definition);
+  }
+
+  public ArrayList<Definition> getDefinitions() {
+    return mDefinitions;
   }
 }
