@@ -6,8 +6,8 @@ public class WordClone{
   private int mId;
 
   public WordClone (String word, int id) {
-   mWord = word;
-   mId = id;
+    mWord = word;
+    mId = id;
   }
 
   public String getWord() {

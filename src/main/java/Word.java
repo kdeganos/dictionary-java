@@ -8,11 +8,11 @@ public class Word{
   private ArrayList<Definition> mDefinitions;
 
   public Word (String word) {
-   mWord = word;
-   mId = instances.size();
-   instances.add(this);
-   mDefinitions = new ArrayList<Definition>();
-   sortWords();
+    mWord = word;
+    mId = instances.size();
+    instances.add(this);
+    mDefinitions = new ArrayList<Definition>();
+    sortWords();
   }
 
   public String getWord() {

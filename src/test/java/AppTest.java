@@ -25,7 +25,6 @@ public class AppTest extends FluentTest{
   @After
   public void tearDown() {
     Word.clear();
-    // Definition.clear();
   }
 
   @Test
@@ -73,5 +72,4 @@ public class AppTest extends FluentTest{
     submit(".btn");
     assertThat(pageSource()).contains("A procedure for critical evaluation.");
   }
-
 }
