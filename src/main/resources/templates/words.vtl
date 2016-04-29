@@ -1,10 +1,11 @@
-<h1>All Words</h1>
+<h1>All Words (in alphabetical order)</h1>
 #if ($wordIsNew)
   <h3>Your word has been saved!</h3>
 #end
+
 <ul>
-  #foreach ($word in $words)
-    <li><a href="/words/$word.getId()">$word.getWord()</a></li>
+  #foreach ($sortedWord in $SortedWords)
+    <li><a href="/words/$sortedWord.getId()">$sortedWord.getWord()</a></li>
   #end
 </ul>
 <a href="/words/new">Add a New Word</a>

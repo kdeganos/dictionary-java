@@ -30,6 +30,7 @@ public class App {
 
       Word newWord = new Word(word);
 
+      model.put("sortedWords", Word.sortWords());
       model.put("words", Word.all());
       model.put("wordIsNew", wordIsNew);
       model.put("template", "templates/words.vtl");
@@ -39,6 +40,7 @@ public class App {
     get("/words", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
 
+      model.put("sortedWords", Word.sortWords());
       model.put("words", Word.all());
       model.put("template", "templates/words.vtl");
       return new ModelAndView(model, layout);

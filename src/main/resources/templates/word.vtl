@@ -1,14 +1,14 @@
-<h1>$word.getWord():</h1>
-#if ($definitionIsNew)
-  <h3>Your definition has been saved!</h3>
-#end
+<h1><span class="word">$word.getWord()</span>:</h1>
 
 <ol>
   #foreach($definition in $word.getDefinitions())
     <li>$definition.getDefinition()</li>
   #end
 </ol>
+#if ($definitionIsNew)
+<h3>Your definition has been saved!</h3>
+#end
 
-<a href="/words">All Words</a>
-<br>
 <a href="/words/$word.getId()/definitions/new">Add a New Definition</a>
+<br>
+<a href="/words">All Words</a>

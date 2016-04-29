@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.*;
 
 public class Word{
   private String mWord;
@@ -43,5 +44,18 @@ public class Word{
 
   public ArrayList<Definition> getDefinitions() {
     return mDefinitions;
+  }
+
+  public static ArrayList<Word> sortWords() {
+    ArrayList<Word> list = instances;
+    Collections.sort(list, new Comparator<Word>() {
+      @Override
+      public int compare(Word s1, Word s2) {
+        String word1 = s1.getWord();
+        String word2 = s2.getWord();
+        return word1.compareToIgnoreCase(word2);
+      }
+    });
+    return list;
   }
 }
